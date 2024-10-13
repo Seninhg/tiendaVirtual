@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/**---------------- Header---------------- **/
+header {
+    background-color: #2c3e50; /* Color más moderno */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-bottom-left-radius: 10px; /* Bordes redondeados */
+    border-bottom-right-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Separación entre los ítems */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #ecf0f1; /* Color claro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+header nav ul li a:hover {
+    background-color: #3498db; /* Fondo azul claro en hover */
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #e74c3c; /* Color rojo para el activo */
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/**---------------- Main---------------- **/
+
+main {
+    padding: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

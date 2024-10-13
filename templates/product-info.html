@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Productos - Tienda Virtual{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product-info.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="product-detail" data-id="{{ producto.id_producto }}" id="product_target">
+        <div class="product-image">
+            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+        </div>
+        <div class="product-info">
+            <h1>{{ producto.nombre }}</h1>
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ ({{ producto.calificacion }})
+            </div>
+            <div class="price">
+                S/ {{ producto.precio_actual }}
+                {% if producto.precio_descuento %}
+                <span class="old-price">S/ {{ producto.precio_descuento }}</span>
+                {% endif %}
+            </div>
+            <div class="quantity">
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+            <a href="#" class="btn-add-cart" id="btn-add-cart">Agregar al Carro</a>
+        </div>
+    </div>
+    <div class="seller-info">
+        <p>Categoría: <strong>{{ producto.sub_categoria }}</strong></p>
+    </div>
+    <div class="similar-products-container">
+        <h2>Puede que te interese mirar</h2>
+        <div id="similar-products" class="similar-products">
+            <!-- Productos similares serán cargados aquí con AJAX -->
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/product-info.js') }}"></script>
+<script>
+
+</script>
+{% endblock %}

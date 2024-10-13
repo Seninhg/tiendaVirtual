@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Productos - Tienda Virtual{% endblock %}
+
+<!--ESTILOS ESPECIFICOS-->
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/productos.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<section id="productos">
+    <h2>Productos Disponibles</h2>
+    <div class="pagination-container">
+        <button id="prev-page" class="pagination-btn" disabled>Anterior</button>
+        <!-- Campo para ingresar la página -->
+        <input type="number" id="page-input" value="1" min="1" style="width: 50px; text-align: center;">
+
+        <button id="next-page" class="pagination-btn">Siguiente</button>
+    </div>
+    <div class="productos-container" id="products-list"></div>
+</section>
+{% endblock %}
+
+<!--SCRIPTS ESPECIFICOS-->
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/productos.js') }}" type="module"></script>
+{% endblock %}
